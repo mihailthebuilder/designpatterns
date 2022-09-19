@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Test;
 public class CloudTest {
     @Test
     void testCreateServers() {
-        Cloud cloud1 = new Cloud(new AwsServerFactory());
-        cloud1.startOneServer();
-        assertEquals("AWS server created", cloud1.getLogs());
+        Cloud awsCloud = new Cloud(new AwsServerFactory());
+        awsCloud.startOneServer();
+        assertEquals("AWS server created", awsCloud.getLogs());
 
-        Cloud cloud2 = new Cloud(new GcpServerFactory());
-        cloud2.startOneServer();
-        assertEquals("GCP server created", cloud2.getLogs());
+        Cloud gcpCloud = new Cloud(new GcpServerFactory());
+        gcpCloud.startOneServer();
+        assertEquals("GCP server created", gcpCloud.getLogs());
     }
 }
