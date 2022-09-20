@@ -1,6 +1,7 @@
 package designpatterns.structural.adapter;
 
 interface Bird {
+    // source interface
     public String fly();
 
     public String makeSound();
@@ -17,6 +18,7 @@ class Sparrow implements Bird {
 }
 
 interface ToyBird {
+    // target interface
     public String makeNoise();
 }
 
