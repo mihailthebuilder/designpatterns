@@ -1,4 +1,4 @@
-package designpatterns.prototype;
+package designpatterns.creational.prototype;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

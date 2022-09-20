@@ -1,4 +1,4 @@
-package designpatterns.factorymethod;
+package designpatterns.creational.abstractfactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 public class CloudTest {
     @Test
     void testCreateServers() {
-        Cloud awsCloud = new AwsCloud();
+        Cloud awsCloud = new Cloud(new AwsServerFactory());
         awsCloud.startOneServer();
         assertEquals("AWS server created", awsCloud.getLogs());
 
-        Cloud gcpCloud = new GcpCloud();
+        Cloud gcpCloud = new Cloud(new GcpServerFactory());
         gcpCloud.startOneServer();
         assertEquals("GCP server created", gcpCloud.getLogs());
     }

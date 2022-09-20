@@ -1,4 +1,4 @@
-package designpatterns.factorymethod;
+package designpatterns.creational.factorymethod;
 
 public abstract class Cloud {
     private String logs;

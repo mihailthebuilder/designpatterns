@@ -1,10 +1,10 @@
-package designpatterns.builder;
+package designpatterns.creational.builder;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import designpatterns.builder.Computer.ComputerBuilder;
+import designpatterns.creational.builder.Computer.ComputerBuilder;
 
 public class ComputerTest {
     @Test
