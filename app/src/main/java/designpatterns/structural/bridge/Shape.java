@@ -1,35 +1,47 @@
 package designpatterns.structural.bridge;
 
-interface Color {
-    public String getColor();
+interface LengthOfASide {
+    public int getLengthOfASide();
 }
 
 public abstract class Shape {
-    private Color color;
+    protected LengthOfASide lengthOfASide;
 
-    public Shape(Color c) {
-        this.color = c;
+    public Shape(LengthOfASide l) {
+        this.lengthOfASide = l;
     }
 
-    abstract public String getColor();
+    abstract public int getPerimeter();
 }
 
 class Triangle extends Shape {
-    public Triangle(Color c) {
-        super(c);
+    public Triangle(LengthOfASide l) {
+        super(l);
     }
 
-    public String getColor() {
-        return this.getColor();
+    public int getPerimeter() {
+        return this.lengthOfASide.getLengthOfASide() * 3;
     }
 }
 
 class Square extends Shape {
-    public Square(Color c) {
-        super(c);
+    public Square(LengthOfASide l) {
+        super(l);
     }
 
-    public String getColor() {
-        return this.getColor();
+    public int getPerimeter() {
+        return this.lengthOfASide.getLengthOfASide() * 4;
+    }
+}
+
+class LengthOfASideOf3 implements LengthOfASide {
+    public int getLengthOfASide() {
+        return 3;
+    }
+}
+
+class LengthOfASideOf10 implements LengthOfASide {
+    public int getLengthOfASide() {
+        return 10;
     }
 }
